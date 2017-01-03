@@ -1,0 +1,13 @@
+html {
+  font-family: sans-serif;
+  font-size: 16px; }
+
+a {
+  color: #fdd624;
+  font-weight: bold; }
+
+a:hover {
+  color: #2291d0; }
+
+.test {
+  color: green; }
