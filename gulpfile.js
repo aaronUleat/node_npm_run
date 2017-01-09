@@ -58,12 +58,22 @@ const 		gulp 				= require('gulp'),
 
 				es6: {
 					presets: ['es2015']
+				},
+				imagemin: {
+					progressive: true,
+					use : [ pngquant() ]
+				},
+				svgmin: {
+					plugins: [
+						{ convertColors: false },
+						{ removeAttrs: { attrs : ['fill'] } }
+					]
 				}
-			}
+			};
 
 gulp.task('pug', () => {
 	gulp
-		.src(`${dir.src}/pug/**/*.pug`)
+		.src(`${dir.src}/pug/views/**/*.pug`)
 		.pipe( pug( opts.pug ) )
 		.pipe( gulp.dest( dir.dist ) );
 });
@@ -80,4 +90,26 @@ gulp.task('es6', () => {
 		.src(`${dir.src}/es6/*.js`)
 		.pipe( babel(opts.es6) )
 		.pipe( gulp.dest(`${dir.dist}/js`) );
+});
+
+
+gulp.task('img', () => {
+	gulp
+		.src(`${dir.src}/img/*.+(png|jpeg|jpg|gif)`)
+		.pipe( imagemin(opts.imagemin) )
+		.pipe( gulp.dest(`${dir.dist}/img`) );
+});
+
+gulp.task('svg', ()=> {
+	gulp
+		.src( `${dir.src}/img/*.svg` )
+		.pipe( svgmin(opts.svgmin) )
+		.pipe( gulp.dest(`${dir.dist}/img`) );
+});
+
+gulp.task('webp', ()=> {
+	gulp
+		.src( `${dir.src}/img/*.+(png|jpeg|jpg)` )
+		.pipe( webp() )
+		.pipe( gulp.dest(`${dir.dist}/img/webp`) )
 });

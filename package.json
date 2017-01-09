@@ -14,7 +14,12 @@
     "watch:pug": "onchange \"./src/pug/**\" -- npm run pug ",
     "watch:sass": "onchange \"./src/scss/**\" -- npm run sass ",
     "watch:es6": "onchange \"./src/es6/**\" -- npm run es6 ",
-    "watch:dev": "parallelshell \"npm run serve\" \"npm run watch:pug\" \"npm run watch:sass\" \"npm run watch:es6\" "
+    "watch:dev": "parallelshell \"npm run serve\" \"npm run watch:pug\" \"npm run watch:sass\" \"npm run watch:es6\" ",
+    "img": "gulp img",
+    "svg": "gulp svg",
+    "webp": "gulp webp",
+    "fonts": "gulp fonts",
+    "buld:media": "npm run img && npm run svg && npm run webp && npm run fonts "
 
   },
   "repository": {
