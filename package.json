@@ -5,7 +5,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"http-server",
+    "start": "http-server",
     "pug": "gulp pug",
     "sass": "gulp sass",
     "es6": "gulp es6",
@@ -19,19 +19,21 @@
     "svg": "gulp svg",
     "webp": "gulp webp",
     "fonts": "gulp fonts",
-    "buld:media": "npm run img && npm run svg && npm run webp && npm run fonts "
-
+    "buld:media": "npm run img && npm run svg && npm run webp && npm run fonts ",
+    "css": "gulp css",
+    "js": "gulp js",
+    "html": "gulp html",
+    "build:prod": "npm run css && npm run js && npm run html",
+    "watch:css": "onchange \"./dist/css/**\" -- npm run css ",
+    "watch:js": "onchage \"./dist/js/** \" -- npm run js ",
+    "watch:html": "onchange \"./dist/views/*.html\" -- npm run html",
+    "watch:prod": "parallelshell \"npm run serve\" \"npm run watch:css\" \"npm run watch:js\" \"npm run watch:html\" ",
+    "start": "npm run build:prod && npm run watch:dev"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jonmircha/ednode2016.git"
+    "type": "git"
   },
-  "author": "Jonathan MirCha <jonmircha@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/jonmircha/ednode2016/issues"
-  },
-  "homepage": "https://github.com/jonmircha/ednode2016#readme",
   "keywords": [],
   "dependencies": {
     "animate.css": "^3.5.2",
@@ -57,6 +59,7 @@
     "gulp-uncss": "^1.0.6",
     "gulp-useref": "^3.1.2",
     "gulp-webp": "^2.3.0",
+    "htmlmin": "0.0.7",
     "imagemin-pngquant": "^5.0.0",
     "onchange": "^3.0.0",
     "parallelshell": "^2.0.0"

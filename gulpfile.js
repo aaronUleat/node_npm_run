@@ -28,14 +28,14 @@ const 		gulp 				= require('gulp'),
 					`${dir.nm}/font-awesome/css/font-awesome.min.css`,
 					`${dir.nm}/responsimple/responsimple.min.css`,
 					`${dir.nm}/owl.carousel/dist/assets/owl.theme.default.min.css`,
-					`${dir.dist}/css/estilos.css`
+					`${dir.dist}/css/styles.css`
 				],
 				mCSS: 'estilos.min.css',
 				JS: [
 					`${dir.nm}/jquery/dist/jquery.min.js`,
 					`${dir.nm}/owl.carousel/dist/owl.carousel.min.js`,
 					`${dir.nm}/wowjs/dist/wow.min.js`,
-					`${dir.dist}/js/codigos.js`
+					`${dir.dist}/js/main.js`
 				],
 				mJSS: 'codigos.min.js',
 				fonts: [
@@ -47,8 +47,7 @@ const 		gulp 				= require('gulp'),
 				pug: {
 					pretty: true,
 					locals: {
-						title: 'Maraton',
-						files: files
+
 					}
 				},
 
@@ -68,6 +67,16 @@ const 		gulp 				= require('gulp'),
 						{ convertColors: false },
 						{ removeAttrs: { attrs : ['fill'] } }
 					]
+				},
+				uncss: {
+					html: [`${dir.dist}/**/*.html`]
+				},
+				autoprefixier: {
+					browsers: ['last 5 versions'],
+					cascade: false
+				},
+				htmlmin: {
+					collapseWhitespace: true
 				}
 			};
 
@@ -75,7 +84,7 @@ gulp.task('pug', () => {
 	gulp
 		.src(`${dir.src}/pug/views/**/*.pug`)
 		.pipe( pug( opts.pug ) )
-		.pipe( gulp.dest( dir.dist ) );
+		.pipe( gulp.dest( `${dir.dist}/views` ) );
 });
 
 gulp.task('sass', () => {
@@ -112,4 +121,38 @@ gulp.task('webp', ()=> {
 		.src( `${dir.src}/img/*.+(png|jpeg|jpg)` )
 		.pipe( webp() )
 		.pipe( gulp.dest(`${dir.dist}/img/webp`) )
+});
+
+
+gulp.task('fonts', ()=> {
+	gulp
+		.src(files.fonts)
+		.pipe( gulp.dest(`${dir.dist}`) )
+});
+
+gulp.task('css', ()=> {
+	gulp
+		.src(files.CSS)
+		.pipe( concat(files.mCSS) )
+		.pipe( uncss(opts.uncss) )
+		.pipe( autoprefixier(opts.autoprefixier) )
+		.pipe( cleanCSS() )
+		.pipe( gulp.dest(`${dir.dist}/css`) );
+});
+
+gulp.task('js', ()=> {
+	gulp
+		.src( files.JS )
+		.pipe( concat(files.mJS) )
+		.pipe( uglify() )
+		.pipe( gulp.dest(`${dir.dist}/js`) );
+});
+
+
+gulp.task('html', ()=> {
+	gulp
+		.src(`${dir.dist}/*.html`)
+		.pipe( useref() )
+		.pipe( htmlmin(opts.htmlmin) )
+		.pipe( gulp.dest(dir.dist) );
 });
