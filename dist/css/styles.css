@@ -28,3 +28,22 @@
   cursor: pointer;
   line-height: 2.5;
   font-size: 1.5em; }
+
+.ssn-auth__form {
+  max-width: 500px;
+  display: table;
+  margin: 0 auto;
+  margin-top: 50px; }
+  .ssn-auth__form__inp input {
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    border: 1px solid dodgerblue; }
+  .ssn-auth__form__sub button {
+    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+    border: none;
+    text-transform: uppercase;
+    color: white;
+    background: dodgerblue; }
