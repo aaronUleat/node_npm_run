@@ -1,0 +1,96 @@
+@import "../../node_modules/bourbon/core/bourbon";
+@import "mixins";
+@import "../../node_modules/font-awesome/css/font-awesome.css";
+$checkbox-width:      25px;
+body {
+    @include cover-background('../img/background_cover.jpg');
+    font-family: "Oswald";
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  font-size: .9em;
+  li {
+    margin-top: .6em;
+  }
+}
+
+.signup {
+    max-width: 1110px;
+    &__logo{
+      background: black;
+      @include mq-min(992px) {
+        background: inherit;
+      }
+      padding-top: 1em;
+      padding-bottom: 1em;
+      padding-left: 1em;
+       a {
+           img {
+             max-width: 130px;
+              display: table;
+             @include mq-min(992px) {
+               max-width: 150px;
+               margin:  0 auto;
+             }
+          }
+      }
+    }
+    &__form {
+        background: white;
+        position: relative;
+        padding-top: 1em;
+      &__title {
+        h2 {
+          font-size: 1.5em;
+        }
+      }
+      &__signin {
+        width: 240px;
+        @include center(horizontal);
+        top: 1em;
+        p {
+          font-size: .8em;
+        }
+      }
+    }
+    &__footer {
+
+    }
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  display: none
+}
+input[type='checkbox']+label {
+  display: block;
+  float: left;
+  margin: 0 8px 0 0;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  border: 1px solid #999;
+  cursor: pointer;
+  background: #fff url("../img/input-unchecked.png");
+  background-position: 2px center
+}
+input[type='checkbox']:checked+label {
+  background: #fff url("../img/input-checked.png");
+  background-repeat: no-repeat;
+  background-position: 2px center
+}
+
+.register {
+  background: linear-gradient(#66aa1e, #459418);
+  height: 78px;
+  width: 305px;
+  top: 11px;
+  margin: 10px 0;
+  border-radius: 0px;
+}
