@@ -88,16 +88,16 @@ gulp.task('pug', () => {
 });
 
 gulp.task('sass', () => {
-	gulp
+	return gulp
 		.src(`${dir.src}/scss/*.scss`)
 		.pipe( sass( opts.sass ) )
 		.pipe( gulp.dest(`${dir.dist}/css`) );
 });
 
 gulp.task('es6', () => {
-	gulp
+	return gulp
 		.src(`${dir.src}/es6/*.js`)
-		.pipe( babel(opts.es6) )
+		//.pipe( babel(opts.es6) )
 		.pipe( gulp.dest(`${dir.dist}/js`) );
 });
 

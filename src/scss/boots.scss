@@ -1,0 +1,29 @@
+$height: 60px;
+$gutter: 15px;
+
+.b {
+  &__header {
+    height: $height;
+  }
+  &__content {
+
+    &__aside {
+
+    }
+    &__conts {
+      &__h {
+        height: $height;
+      }
+      &--two {
+        height: $height * 2;
+      }
+      &--five {
+        height: $height;
+      }
+    }
+  }
+}
+
+body {
+  background: red;
+}

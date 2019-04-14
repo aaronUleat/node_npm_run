@@ -1,0 +1,91 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+        meta(http-equiv='X-UA-Compatible', content='ie=edge')
+        title Ahorcado
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.css")
+        link(rel="stylesheet", href="../css/style.css")
+    body
+        .jumbotron.jumbotron-fluid.bg-warning.ahorcado__jumbotron(rel="jumbotron")
+            .container
+                h1.display-2.text-danger Ahorcado
+                p.display-4
+                    | ¿Cómo se juega ?
+                p.lead Mediante una fila de guiones,la palabra a adivinar es representada, dando el número de letras, números y categoría. Si el jugador adivinador sugiere una letra que aparece en la palabra, el otro jugador la escribe en todas las posiciones correctas. Si la l etra no pertenece en la palabra, el otro jugador saca un elemento de la figura de hombre palo como una marca de conteo.
+                button.btn.btn-outline-danger.btn-lg.float-right(rel="iniciar-juego") Iniciar Juego
+        .ahorcado__game.ahorcado--hidden.bg-info(rel="game-cont")
+            .container
+                .row
+                    .col-7
+                        .ahorcado__letras-btn
+                            h3.text-light.mb-3 Selecciona una letra.
+                            .row.mt-2
+                                .col
+                                    button.btn.btn-outline-warning.btn-block(rel="letter-btn" data-letter="a") a
+                                .col
+                                    button.btn.btn-outline-warning.btn-block(rel="letter-btn" data-letter="b") b
+                                .col
+                                    button.btn.btn-outline-warning.btn-block(rel="letter-btn" data-letter="c") c
+                                .col
+                                    button.btn.btn-outline-warning.btn-block(rel="letter-btn" data-letter="d") d
+                                .col
+                                    button.btn.btn-outline-warning.btn-block(rel="letter-btn" data-letter="e") e
+                            .row.mt-2
+                                .col
+                                    button.btn.btn-outline-warning.btn-block(rel="letter-btn" data-letter="f") f
+                                .col
+                                    button.btn.btn-outline-warning.btn-block(rel="letter-btn" data-letter="g") g
+                                .col
+                                    button.btn.btn-outline-warning.btn-block(rel="letter-btn" data-letter="h") h
+                                .col
+                                    button.btn.btn-outline-warning.btn-block(rel="letter-btn" data-letter="i") i
+                                .col
+                                    button.btn.btn-outline-warning.btn-block(rel="letter-btn" data-letter="j") j
+                            .row.mt-2
+                                .col
+                                    button.btn.btn-outline-warning.btn-block(rel="letter-btn" data-letter="k") k
+                                .col
+                                    button.btn.btn-outline-warning.btn-block(rel="letter-btn" data-letter="l") l
+                                .col
+                                    button.btn.btn-outline-warning.btn-block(rel="letter-btn" data-letter="m") m
+                                .col
+                                    button.btn.btn-outline-warning.btn-block(rel="letter-btn" data-letter="n") n
+                                .col
+                                    button.btn.btn-outline-warning.btn-block(rel="letter-btn" data-letter="o") o
+                            .row.mt-2
+                                .col
+                                    button.btn.btn-outline-warning.btn-block(rel="letter-btn" data-letter="p") p
+                                .col
+                                    button.btn.btn-outline-warning.btn-block(rel="letter-btn" data-letter="q") q
+                                .col
+                                    button.btn.btn-outline-warning.btn-block(rel="letter-btn" data-letter="r") r
+                                .col
+                                    button.btn.btn-outline-warning.btn-block(rel="letter-btn" data-letter="s") s
+                                .col
+                                    button.btn.btn-outline-warning.btn-block(rel="letter-btn" data-letter="t") t
+                            .row.mt-2
+                                .col
+                                    button.btn.btn-outline-warning.btn-block(rel="letter-btn" data-letter="u") u
+                                .col
+                                    button.btn.btn-outline-warning.btn-block(rel="letter-btn" data-letter="v") v
+                                .col
+                                    button.btn.btn-outline-warning.btn-block(rel="letter-btn" data-letter="x") x
+                                .col
+                                    button.btn.btn-outline-warning.btn-block(rel="letter-btn" data-letter="y") y
+                                .col
+                                    button.btn.btn-outline-warning.btn-block(rel="letter-btn" data-letter="z") z
+                            .row.mt-3
+                                .col-12
+                                    p.ahorcado__palabras.text-center(rel='current-word')
+
+                        .ahorcado__letras-comp
+                    .col-5
+                        .row.mt-5
+                            .col-12
+                                button.btn.btn-outline-light(rel='reload-game') REINICIAR JUEGO
+                        .row.mt-4
+                            .col-12(rel="selected-letters")
+
+        script(src="../js/script.js")

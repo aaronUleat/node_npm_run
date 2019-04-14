@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ahorcado</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+    <div class="jumbotron jumbotron-fluid bg-warning ahorcado__jumbotron" rel="jumbotron">
+      <div class="container">
+        <h1 class="display-2 text-danger">Ahorcado</h1>
+        <p class="display-4">¿Cómo se juega ?</p>
+        <p class="lead">Mediante una fila de guiones,la palabra a adivinar es representada, dando el número de letras, números y categoría. Si el jugador adivinador sugiere una letra que aparece en la palabra, el otro jugador la escribe en todas las posiciones correctas. Si la l etra no pertenece en la palabra, el otro jugador saca un elemento de la figura de hombre palo como una marca de conteo.</p>
+        <button class="btn btn-outline-danger btn-lg float-right" rel="iniciar-juego">Iniciar Juego</button>
+      </div>
+    </div>
+    <div class="ahorcado__game ahorcado--hidden bg-info" rel="game-cont">
+      <div class="container">
+        <div class="row">
+          <div class="col-7">
+            <div class="ahorcado__letras-btn">
+              <h3 class="text-light mb-3">Selecciona una letra.</h3>
+              <div class="row mt-2">
+                <div class="col">
+                  <button class="btn btn-outline-warning btn-block" rel="letter-btn" data-letter="a">a</button>
+                </div>
+                <div class="col">
+                  <button class="btn btn-outline-warning btn-block" rel="letter-btn" data-letter="b">b</button>
+                </div>
+                <div class="col">
+                  <button class="btn btn-outline-warning btn-block" rel="letter-btn" data-letter="c">c</button>
+                </div>
+                <div class="col">
+                  <button class="btn btn-outline-warning btn-block" rel="letter-btn" data-letter="d">d</button>
+                </div>
+                <div class="col">
+                  <button class="btn btn-outline-warning btn-block" rel="letter-btn" data-letter="e">e</button>
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col">
+                  <button class="btn btn-outline-warning btn-block" rel="letter-btn" data-letter="f">f</button>
+                </div>
+                <div class="col">
+                  <button class="btn btn-outline-warning btn-block" rel="letter-btn" data-letter="g">g</button>
+                </div>
+                <div class="col">
+                  <button class="btn btn-outline-warning btn-block" rel="letter-btn" data-letter="h">h</button>
+                </div>
+                <div class="col">
+                  <button class="btn btn-outline-warning btn-block" rel="letter-btn" data-letter="i">i</button>
+                </div>
+                <div class="col">
+                  <button class="btn btn-outline-warning btn-block" rel="letter-btn" data-letter="j">j</button>
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col">
+                  <button class="btn btn-outline-warning btn-block" rel="letter-btn" data-letter="k">k</button>
+                </div>
+                <div class="col">
+                  <button class="btn btn-outline-warning btn-block" rel="letter-btn" data-letter="l">l</button>
+                </div>
+                <div class="col">
+                  <button class="btn btn-outline-warning btn-block" rel="letter-btn" data-letter="m">m</button>
+                </div>
+                <div class="col">
+                  <button class="btn btn-outline-warning btn-block" rel="letter-btn" data-letter="n">n</button>
+                </div>
+                <div class="col">
+                  <button class="btn btn-outline-warning btn-block" rel="letter-btn" data-letter="o">o</button>
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col">
+                  <button class="btn btn-outline-warning btn-block" rel="letter-btn" data-letter="p">p</button>
+                </div>
+                <div class="col">
+                  <button class="btn btn-outline-warning btn-block" rel="letter-btn" data-letter="q">q</button>
+                </div>
+                <div class="col">
+                  <button class="btn btn-outline-warning btn-block" rel="letter-btn" data-letter="r">r</button>
+                </div>
+                <div class="col">
+                  <button class="btn btn-outline-warning btn-block" rel="letter-btn" data-letter="s">s</button>
+                </div>
+                <div class="col">
+                  <button class="btn btn-outline-warning btn-block" rel="letter-btn" data-letter="t">t</button>
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col">
+                  <button class="btn btn-outline-warning btn-block" rel="letter-btn" data-letter="u">u</button>
+                </div>
+                <div class="col">
+                  <button class="btn btn-outline-warning btn-block" rel="letter-btn" data-letter="v">v</button>
+                </div>
+                <div class="col">
+                  <button class="btn btn-outline-warning btn-block" rel="letter-btn" data-letter="x">x</button>
+                </div>
+                <div class="col">
+                  <button class="btn btn-outline-warning btn-block" rel="letter-btn" data-letter="y">y</button>
+                </div>
+                <div class="col">
+                  <button class="btn btn-outline-warning btn-block" rel="letter-btn" data-letter="z">z</button>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-12">
+                  <p class="ahorcado__palabras text-center" rel="current-word"></p>
+                </div>
+              </div>
+            </div>
+            <div class="ahorcado__letras-comp"></div>
+          </div>
+          <div class="col-5">
+            <div class="row mt-5">
+              <div class="col-12">
+                <button class="btn btn-outline-light" rel="reload-game">REINICIAR JUEGO</button>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-12" rel="selected-letters"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

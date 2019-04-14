@@ -1,0 +1,21 @@
+.ahorcado {
+  &--hidden {
+    display: none !important;
+  }
+  &--show {
+    display: block !important;
+  }
+  &__jumbotron {
+    margin: 0;
+    height: 100vh;
+  }
+
+  &__game {
+    height: 100vh;
+  }
+
+  &__palabras {
+    letter-spacing: 42px;
+    color: greenyellow;
+  }
+}
