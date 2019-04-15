@@ -2,45 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ce0d957-7e68-4790-bd84-564a2ddede77" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pug/views/index.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/boots.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/libs/bootstrap.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/boots.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/css/cashier.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/css/mixins.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/es6/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/colors.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/mixins.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/css/myb_signup.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/css/myb_sports.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/css/propagation.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/css/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/background_cover.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/input-checked.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/input-unchecked.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/myb_logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/codigos.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/flashcard_QA.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/prop_2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/propagation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/views/cashier.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/views/four-digits.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/views/last-four.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/views/myb_form_v1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/views/propagation.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/views/view.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/es6/prop_2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/es6/propagation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pug/views/cashier.pug" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pug/views/four-digits.pug" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pug/views/myb_form_v1.pug" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pug/views/propagation.pug" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/cashier.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/myb_signup.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/myb_sports.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/propagation.scss" beforeDir="false" />
     </list>
     <ignored path="node_npm_run.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -234,18 +202,6 @@
             <path>
               <item name="node_npm_run" type="b2602c69:ProjectViewProjectNode" />
               <item name="node_npm_run" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="node_npm_run" type="b2602c69:ProjectViewProjectNode" />
-              <item name="node_npm_run" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="node_npm_run" type="b2602c69:ProjectViewProjectNode" />
-              <item name="node_npm_run" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -293,7 +249,7 @@
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/node_modules/gulp" />
     <property name="js.eslint.eslintPackage" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../cenfotec_js" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
@@ -380,12 +336,12 @@
       <workItem from="1546386858535" duration="2688000" />
       <workItem from="1549252527256" duration="10463000" />
       <workItem from="1553968636248" duration="19120000" />
-      <workItem from="1555257313674" duration="15107000" />
+      <workItem from="1555257313674" duration="17046000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84922000" />
+    <option name="totallyTimeSpent" value="86861000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
