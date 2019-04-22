@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ahorcado</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i">
     <link rel="stylesheet" href="../css/style.css">
   </head>
   <body>
@@ -19,10 +20,18 @@
     </div>
     <div class="ahorcado__game ahorcado--hidden bg-info" rel="game-cont">
       <div class="container">
-        <div class="row">
+        <div class="row pt-5">
+          <div class="col-6">
+            <div class="btn btn-lg btn-warning float-right">Jugador  <span class="badge badge-secondary" rel="punto-jugador">0</span></div>
+          </div>
+          <div class="col-6">
+            <div class="btn btn-lg btn-danger float-left">Maquina  <span class="badge badge-secondary" rel="punto-maquina">0</span></div>
+          </div>
+        </div>
+        <div class="row mt-3">
           <div class="col-7">
             <div class="ahorcado__letras-btn">
-              <h3 class="text-light mb-3">Selecciona una letra.</h3>
+              <h3 class="text-light mb-3">Selecciona una letra</h3>
               <div class="row mt-2">
                 <div class="col">
                   <button class="btn btn-outline-warning btn-block" rel="letter-btn" data-letter="a">a</button>
@@ -119,11 +128,24 @@
           <div class="col-5">
             <div class="row mt-5">
               <div class="col-12">
+                <div class="btn btn-primary" style="cursor: auto !important;">Oportunidades  <span class="badge badge-light" rel="badge-counter">0</span></div>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-12" rel="selected-letters"></div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-12">
                 <button class="btn btn-outline-light" rel="reload-game">REINICIAR JUEGO</button>
               </div>
             </div>
-            <div class="row mt-4">
-              <div class="col-12" rel="selected-letters"></div>
+            <div class="row mt-3">
+              <div class="col-12">
+                <button class="btn btn-outline-warning" rel="gen-pista">GENERAR PISTA</button>
+              </div>
+              <div class="col-12 mt-2">
+                <p class="text-light ahorcado--hidden" rel="pista-copy"></p>
+              </div>
             </div>
           </div>
         </div>
